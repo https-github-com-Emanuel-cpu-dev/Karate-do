@@ -1,0 +1,125 @@
+/* styles.css */
+/* Estilo del fondo con el símbolo del yin y el yang de colores */
+.background {
+    background-image: url('https://i.pinimg.com/736x/6b/8b/04/6b8b04631c74f4af5b991252cf2c7239.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/* Cambiar el color del título */
+h1 {
+    color: #ffffff; /* Cambia "#FF0000" al color que desees utilizando un valor hexadecimal, RGB o un nombre de color */
+}
+
+/* Estilo para hacer la página responsive utilizando CSS Grid */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    position: relative;
+    z-index: 1;
+}
+
+/* Agrega opacidad a las imágenes en el carrusel */
+.semi-transparent {
+    opacity: 0.7; /* Ajusta la opacidad según desees (0.0 a 1.0) */
+}
+
+/* Centrar las imágenes en el carrusel */
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh; /* Asegura que la imagen ocupe toda la altura de la pantalla */
+}
+
+/* Ajusta el tamaño máximo de las imágenes */
+.carousel-item img {
+    max-width: 100%; /* Limita el ancho de la imagen al ancho del contenedor */
+    max-height: 100%; /* Limita la altura de la imagen al alto del contenedor */
+    height: auto; /* Evita distorsiones en la imagen */
+}
+
+/* Acelera la transición del carrusel */
+.carousel-inner {
+    transition-duration: 0.10ms; /* Ajusta la duración de la transición según tus preferencias */
+}
+/* Estilo del botón de menú */
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+   
+    right: 100px;
+    top: 30px; /* Ajusta la posición arriba según tus preferencias */
+}
+
+
+/* Estilo del contenedor del menú */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Inicialmente oculto fuera del lado izquierdo */
+    width: 300px; /* Ancho del menú */
+    height: 500%;
+    background-color: transparent; /* Color de fondo del menú */
+    transition: left 0.3s ease; /* Animación de desplazamiento */
+}
+
+/* Estilo del menú */
+.menu-items {
+    padding: 20px;
+    color: white; /* Color de texto del menú */
+}
+
+.menu-items ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-items ul li {
+    margin: 10px 0;
+}
+
+.menu-items ul li a {
+    text-decoration: none;
+    color: white;
+}
